@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div ng-cloak>
+    <md-content layout="row" layout-align="center center">
+        <md-card flex flex-sm="100" flex-gt-sm="90" flex-md="80" flex-gt-md="70">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Данные пользователя</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <form name="form">
+                    <md-button class="md-primary md-raised">Get ip info</md-button>
+                </form>
+            </md-card-content>
+        </md-card>
+    </md-content>
+</div>
+{% endblock %}
