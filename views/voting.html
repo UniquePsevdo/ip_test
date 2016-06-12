@@ -6,35 +6,32 @@
         <md-card flex flex-sm="100" flex-gt-sm="90" flex-md="80" flex-gt-md="70">
             <md-card-title>
                 <md-card-title-text>
-                    <span class="md-headline">Данные пользователя</span>
+                    <span class="md-headline">Голосование</span>
                 </md-card-title-text>
             </md-card-title>
             <md-card-content>
                 <form name="form" class="layout-column">
                     <md-input-container>
-                        <label>Name</label>
+                        <label>1</label>
                         <input ng-model="user.name">
                     </md-input-container>
                     <md-input-container>
-                        <label>Email</label>
+                        <label>2</label>
                         <input ng-model="user.email">
                     </md-input-container>
                     <md-input-container>
-                        <label>City</label>
+                        <label>3</label>
                         <input ng-model="user.city">
                     </md-input-container>
                     <md-input-container>
-                        <label>Country</label>
+                        <label>4</label>
                         <input ng-model="user.country">
                     </md-input-container>
                     <md-input-container>
-                        <label>Gender</label>
-                        <md-select ng-model="gender">
-                            <md-option>Male</md-option>
-                            <md-option>Female</md-option>
-                        </md-select>
+                        <label>5</label>
+                        <input ng-model="user.country">
                     </md-input-container>
-                    <md-button class="md-primary md-raised" ng-click="redirectVotingPage()">Continue</md-button>
+                    <md-button class="md-primary md-raised" ng-click="redirectApprovePage()">Continue</md-button>
                 </form>
             </md-card-content>
         </md-card>

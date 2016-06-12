@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div ng-cloak>
+    <md-content layout="row" layout-align="center center">
+        <md-card flex flex-sm="100" flex-gt-sm="90" flex-md="80" flex-gt-md="70">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Последняя</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <form name="form" class="layout-column">
+                    <md-radio-group ng-model="result">
+                        <md-radio-button value="Apple">Apple</md-radio-button>
+                        <md-radio-button value="Banana"> Banana </md-radio-button>
+                        <md-radio-button value="Mango">Mango</md-radio-button>
+                    </md-radio-group>
+                    <md-button class="md-primary md-raised">Submit</md-button>
+                </form>
+            </md-card-content>
+        </md-card>
+    </md-content>
+</div>
+{% endblock %}
