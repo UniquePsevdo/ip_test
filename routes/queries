@@ -1,0 +1,47 @@
+//write test accs to db
+/*for(var i=0; i < restAccs.length; i++){
+    var acc = new Account(restAccs[i]);
+    acc.save(function(err){
+        if(err){
+            console.log(err);
+        }
+    });
+}*/
+
+
+//get voited accounts
+/*var now = new Date();
+Account.find({votingDate: {$lt: now}}, function (err, data) {
+    if(err){
+        console.log(err);
+    }else{
+        console.log(data);
+    }
+});*/
+
+//modify date by id after voting
+/*Account.findOneAndUpdate({_id: mongoose.mongo.ObjectId('57790ed85f465144232ea4c4')}, {$set:{votingDate: new Date(2020, 1, 1), cityId:'Some Provider'}}, {new: true}, function(err, doc){
+    if(err){
+        console.log("Something wrong when updating data!");
+    }
+    console.log(doc._id);
+});*/
+
+//find by id
+/*Account.find({_id: mongoose.mongo.ObjectId('57790ed85f465144232ea4c4')}, function (err, data) {
+    if(err){
+        console.log(err);
+    }else{
+        console.log(data);
+    }
+});*/
+
+//find by provider and voting date
+/*var now = new Date();
+Account.find({cityId: 'Test Provider 1', votingDate: {$lt: now}}, function (err, data) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(data);
+    }
+});*/
