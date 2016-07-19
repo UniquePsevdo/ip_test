@@ -1,11 +1,41 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 64px; /* bottom = footer height */
+    overflow: auto;
+}
+
 .footer{
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     font-size: 14px;
+    height: 64px;
+}
+
+.header{
+    position: fixed;
+    z-index: 600;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 md-toolbar.footer.layout-align-center-center.layout-row > div > span > a{
     color: white;
+}
+
+.providers > div > div > div._md-track-container > div._md-track._md-track-fill{
+    display: flex;
+}
+
+md-slider.md-default-theme[disabled][readonly] ._md-sign:after, md-slider[disabled][readonly] ._md-sign:after {
+    border-top-color: rgb(63,81,181);
+}
+
+md-slider.md-default-theme[disabled][readonly] ._md-sign, md-slider[disabled][readonly] ._md-sign {
+    background-color: rgb(63,81,181);
 }
