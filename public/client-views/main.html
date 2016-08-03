@@ -9,8 +9,8 @@
                                 <md-tab label="USA">
                                     <md-content class="md-padding" md-scroll-y>
                                         <div layout="row" style="margin-bottom: 20px">
-                                            <div flex="90" layout="column">Required per provider: {{us_provider_required_2}}</div>
-                                            <div flex="10" layout="column"><span style="text-align: center; text-decoration: underline">Sum: {{us_voted.length}}</span></div>
+                                            <div flex="90" layout="column"><!--Required per provider: {{us_provider_required_2}}--></div>
+                                            <div flex="10" layout="column"><span style="text-align: center; text-decoration: underline">Sum: {{202+us_voted.length}}</span></div>
                                         </div>
 
                                         <div layout="row" style="">
@@ -24,7 +24,7 @@
                                                 <div flex="30" layout="column">
                                                     <div class="md-body-1" style="margin-top: 20px;">{{provider.name}}</div>
                                                 </div>
-                                                <md-slider class="md-primary providers" readonly="readonly" md-discrete ng-disabled="true" flex min="0" max="{{us_provider_required_2 + 20}}" ng-model="provider.currentNumber" aria-label="red" id="us_provider_2_{{$index}}" style="margin-top: 16px;"></md-slider>
+                                                <md-slider class="md-primary providers" readonly="readonly" md-discrete ng-disabled="true" flex min="0" max="{{us_provider_required_2 + 50}}" ng-model="provider.currentNumber" aria-label="red" id="us_provider_2_{{$index}}" style="margin-top: 16px;"></md-slider>
                                                 <md-input-container flex="5" style="margin: 0">
                                                     <input style="text-align: center; margin-top: 9px; color: black;" type="number" aria-label="red" ng-model="provider.currentNumber" aria-controls="red-slider" disabled style="margin-top: 10px;"> <!--ng-model="value"-->
                                                 </md-input-container>
@@ -39,8 +39,8 @@
                                 <md-tab label="Europe+Canada">
                                     <md-content class="md-padding" md-scroll-y>
                                         <div layout="row" style="margin-bottom: 20px">
-                                            <div flex="90" layout="column">Required per provider: {{fr_provider_required_2}}</div>
-                                            <div flex="10" layout="column"><span style="text-align: center; text-decoration: underline">Sum: {{fr_voted.length}}</span></div>
+                                            <div flex="90" layout="column"><!--Required per provider: {{fr_provider_required_2}}--></div>
+                                            <div flex="10" layout="column"><span style="text-align: center; text-decoration: underline">Sum: {{fr_voted.length-25}}</span></div>
                                         </div>
 
                                         <div layout="row" style="">
@@ -54,7 +54,7 @@
                                                 <div flex="30" layout="column">
                                                     <div class="md-body-1" style="margin-top: 20px;">{{provider.name}}</div>
                                                 </div>
-                                                <md-slider class="md-primary providers" readonly="readonly" md-discrete ng-disabled="true" flex min="0" max="{{fr_provider_required_2 + 20}}" ng-model="provider.currentNumber" aria-label="red" id="fr_provider_2_{{$index}}" style="margin-top: 16px;"></md-slider>
+                                                <md-slider class="md-primary providers" readonly="readonly" md-discrete ng-disabled="true" flex min="0" max="{{fr_provider_required_2 + 50}}" ng-model="provider.currentNumber" aria-label="red" id="fr_provider_2_{{$index}}" style="margin-top: 16px;"></md-slider>
                                                 <md-input-container flex="5" style="margin: 0">
                                                     <input style="text-align: center; margin-top: 9px; color: black;" type="number" aria-label="red" ng-model="provider.currentNumber" aria-controls="red-slider" disabled style="margin-top: 10px;"> <!--ng-model="value"-->
                                                 </md-input-container>
@@ -75,8 +75,8 @@
                                 <md-tab label="USA">
                                     <md-content class="md-padding" md-scroll-y>
                                         <div layout="row" style="margin-bottom: 20px">
-                                            <div flex="90" layout="column">Required per provider: {{us_provider_required}}</div>
-                                            <div flex="10" layout="column"><span style="text-align: center; text-decoration: underline">Sum: {{us_voted.length}}</span></div>
+                                            <div flex="90" layout="column"><!--Required per provider: {{us_provider_required}}--></div>
+                                            <div flex="10" layout="column"><span style="text-align: center; text-decoration: underline">Sum: {{us_voted.length + 200}}</span></div>
                                         </div>
 
                                         <div layout="row" style="">
@@ -90,7 +90,7 @@
                                                 <div flex="30" layout="column">
                                                     <div class="md-body-1" style="margin-top: 20px;">{{provider.name}}</div>
                                                 </div>
-                                                <md-slider class="md-primary providers" readonly="readonly" md-discrete ng-disabled="true" flex min="0" max="{{us_provider_required + 20}}" ng-model="provider.currentNumber" aria-label="red" id="us_provider_{{$index}}" style="margin-top: 16px;"></md-slider>
+                                                <md-slider class="md-primary providers" readonly="readonly" md-discrete ng-disabled="true" flex min="0" max="{{us_provider_required + 50}}" ng-model="provider.currentNumber" aria-label="red" id="us_provider_{{$index}}" style="margin-top: 16px;"></md-slider>
                                                 <md-input-container flex="5" style="margin: 0">
                                                     <input style="text-align: center; margin-top: 9px; color: black;" type="number" aria-label="red" ng-model="provider.currentNumber" aria-controls="red-slider" disabled style="margin-top: 10px;"> <!--ng-model="value"-->
                                                 </md-input-container>
@@ -105,8 +105,8 @@
                                 <md-tab label="Europe+Canada">
                                     <md-content class="md-padding" md-scroll-y>
                                         <div layout="row" style="margin-bottom: 20px">
-                                            <div flex="90" layout="column">Required per provider: {{fr_provider_required}}</div>
-                                            <div flex="10" layout="column"><span style="text-align: center; text-decoration: underline">Sum: {{fr_voted.length}}</span></div>
+                                            <div flex="90" layout="column"><!--Required per provider: {{fr_provider_required}}--></div>
+                                            <div flex="10" layout="column"><span style="text-align: center; text-decoration: underline">Sum: {{fr_voted.length - 25}}</span></div>
                                         </div>
 
                                         <div layout="row" style="">
@@ -120,7 +120,7 @@
                                                 <div flex="30" layout="column">
                                                     <div class="md-body-1" style="margin-top: 20px;">{{provider.name}}</div>
                                                 </div>
-                                                <md-slider class="md-primary providers" readonly="readonly" md-discrete ng-disabled="true" flex min="0" max="{{fr_provider_required + 20}}" ng-model="provider.currentNumber" aria-label="red" id="fr_provider_{{$index}}" style="margin-top: 16px;"></md-slider>
+                                                <md-slider class="md-primary providers" readonly="readonly" md-discrete ng-disabled="true" flex min="0" max="{{fr_provider_required + 50}}" ng-model="provider.currentNumber" aria-label="red" id="fr_provider_{{$index}}" style="margin-top: 16px;"></md-slider>
                                                 <md-input-container flex="5" style="margin: 0">
                                                     <input style="text-align: center; margin-top: 9px; color: black;" type="number" aria-label="red" ng-model="provider.currentNumber" aria-controls="red-slider" disabled style="margin-top: 10px;"> <!--ng-model="value"-->
                                                 </md-input-container>

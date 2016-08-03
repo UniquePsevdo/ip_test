@@ -7,7 +7,7 @@ var express = require('express'),
 
 var app = express();
 
-var db = mongoose.connect('mongodb://VolodymyrSydorov:My_1ntent10ns@ds011705.mlab.com:11705/test_accounts');
+//var db = mongoose.connect('mongodb://VolodymyrSydorov:My_1ntent10ns@ds011705.mlab.com:11705/test_accounts');
 var Account = require('./models/accounts.js');
 var usDBconnect = mongoose.createConnection('mongodb://VolodymyrSydorov:My_1ntent10ns@ds013014.mlab.com:13014/gmailaccounts');
 var frDBConnect = mongoose.createConnection('mongodb://VolodymyrSydorov:My_1ntent10ns@ds011745.mlab.com:11745/french_accounts');

@@ -22,8 +22,8 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
         $scope.vpn_us_providers = ['ExpressVPN Los Angeles', 'ExpressVPN USA Miami', 'ExpressVPN Miami', 'VyprVPN USA New York','VyprVPN USA Miami', 'ExpressVPN Washington DC', 'ExpressVPN Washington DC-2', 'ExpressVPN Chicago', 'ExpressVPN Dallas', 'ExpressVPN Hollywood', 'ExpressVPN San Francisco', 'ExpressVPN New Jersey 1', 'ExpressVPN New York', 'ExpressVPN Las Vegas', 'ExpressVPN San Francisco', 'ExpressVPN San Jose', 'ExpressVPN Seattle', 'ExpressVPN Tampa-1'];
         $scope.vpn_fr_providers = ['ExpressVPN France', 'ExpressVPN Switzerland', 'ExpressVPN Frankfurt-1', 'ExpressVPN Canada Montreal-2', 'VyprVPN France', 'VyprVPN Germany', 'VyprVPN Spain', 'VyprVPN United Kingdom', 'VyprVPN Belgium', 'VyprVPN Canada', 'VyprPN Luxembourg', 'VyprVPN Switzerland', 'ExpressVPN Luxembourg', 'ExpressVPN Canada - Vancouver', 'ExpressVPN Canada - Toronto'];
 
-        $scope.us_total = 2500;
-        $scope.fr_total = 2500;
+        $scope.us_total = 3000;
+        $scope.fr_total = 4000;
 
         apiService.getUSVoted().then(function(data){
             $scope.us_voted = data;
