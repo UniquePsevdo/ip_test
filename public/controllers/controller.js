@@ -168,9 +168,15 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
             {name: 'Powerhouse Management', result:[], currentNumber:''}
         ];
 
+        var test = [];
+
         apiService.getUSVoted().then(function(data){
             $scope.us_voted = data;
             for(var i = 0; i < $scope.us_voted.length; i++){
+                if(test.indexOf($scope.us_voted[i].cityId === -1)){
+                    test.push($scope.us_voted[i].cityId);
+                }
+
                 for(var j=0; j < $scope.us_providers_data.length; j++){
                     if($scope.us_voted[i].cityId.trim()===$scope.us_providers_data[j].name.trim()){
                         console.log(i,'-1');
@@ -195,8 +201,10 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
                 }
             }
 
-            console.log($scope.us_providers_result);
-            console.log($scope.us_cities_result);
+            console.log(test);
+
+            /*console.log($scope.us_providers_result);
+            console.log($scope.us_cities_result);*/
 
             /*$scope.us_provider_required = parseInt($scope.us_total/$scope.us_providers.length);
             for(var j = 0; j < $scope.us_providers.length; j++){
