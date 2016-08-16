@@ -193,6 +193,7 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
                     }
                     break;
                 }
+                console.log(i);
             }
 
             console.log($scope.us_providers_result);
