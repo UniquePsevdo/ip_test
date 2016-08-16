@@ -192,6 +192,9 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
                 }
             }
 
+            console.log($scope.us_providers_result);
+            console.log($scope.us_cities_result);
+
             /*$scope.us_provider_required = parseInt($scope.us_total/$scope.us_providers.length);
             for(var j = 0; j < $scope.us_providers.length; j++){
                 $scope.us_result.push({name: $scope.us_providers[j], arr:[], sutki:"", currentNumber:""});
