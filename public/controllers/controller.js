@@ -256,9 +256,6 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
                     }
                 }
             }
-            console.log($scope.fr_providers_result);
-            console.log($scope.fr_cities_result);
-
         });
 
     }]);
