@@ -173,8 +173,10 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
         apiService.getUSVoted().then(function(data){
             $scope.us_voted = data;
             for(var i = 0; i < $scope.us_voted.length; i++){
-                if(test.indexOf($scope.us_voted[i].cityId === -1)){
+                if(test.indexOf($scope.us_voted[i].cityId) === -1){
                     test.push($scope.us_voted[i].cityId);
+                }else{
+                    console.log('refuse');
                 }
 
                 for(var j=0; j < $scope.us_providers_data.length; j++){
