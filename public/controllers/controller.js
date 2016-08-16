@@ -168,6 +168,46 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
             {name: 'Powerhouse Management', result:[], currentNumber:''}
         ];
 
+        $scope.fr_cities_result = [
+            {name: 'Brussels', result:[], currentNumber:''},
+            {name: 'Antwerp', result:[], currentNumber:''},
+            {name: 'Bruges', result:[], currentNumber:''},
+            {name: 'Ghent', result:[], currentNumber:''},
+            {name: 'North York', result:[], currentNumber:''},
+            {name: 'Montreal', result:[], currentNumber:''},
+            {name: 'Vancouver', result:[], currentNumber:''},
+            {name: 'Ottawa', result:[], currentNumber:''},
+            {name: 'Hamilton', result:[], currentNumber:''},
+            {name: 'Toronto', result:[], currentNumber:''},
+            {name: 'Marseille', result:[], currentNumber:''},
+            {name: 'Nice', result:[], currentNumber:''},
+            {name: 'Paris', result:[], currentNumber:''},
+            {name: 'Bordeaux', result:[], currentNumber:''},
+            {name: 'Lille', result:[], currentNumber:''},
+            {name: 'Lyon', result:[], currentNumber:''},
+            {name: 'Montpellier', result:[], currentNumber:''},
+            {name: 'Nantes', result:[], currentNumber:''},
+            {name: 'Reims', result:[], currentNumber:''},
+            {name: 'Toulouse', result:[], currentNumber:''},
+            {name: 'Frankfurt', result:[], currentNumber:''},
+            {name: 'Dusseldorf', result:[], currentNumber:''},
+            {name: 'Berlin', result:[], currentNumber:''},
+            {name: 'Stuttgart', result:[], currentNumber:''},
+            {name: 'Luxembourg', result:[], currentNumber:''},
+            {name: 'Altlinster', result:[], currentNumber:''},
+            {name: 'Barcelona', result:[], currentNumber:''},
+            {name: 'Madrid', result:[], currentNumber:''},
+            {name: 'Valencia', result:[], currentNumber:''},
+            {name: 'Baar', result:[], currentNumber:''},
+            {name: 'Zurich', result:[], currentNumber:''},
+            {name: 'Bern', result:[], currentNumber:''},
+            {name: 'Berkshire', result:[], currentNumber:''},
+            {name: 'Brighton', result:[], currentNumber:''},
+            {name: 'Kent', result:[], currentNumber:''},
+            {name: 'London', result:[], currentNumber:''},
+            {name: 'Sheffield', result:[], currentNumber:''}
+        ];
+
         apiService.getUSVoted().then(function(data){
             $scope.us_voted = data;
             for(var i = 0; i < $scope.us_voted.length; i++){
@@ -186,81 +226,37 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
                                 $scope.us_cities_result[z].currentNumber = $scope.us_cities_result[z].result.length;
                                 break;
                             }
-
                         }
                         break;
                     }
                 }
             }
-
-            /*console.log($scope.us_providers_result);
-            console.log($scope.us_cities_result);*/
-
-            /*$scope.us_provider_required = parseInt($scope.us_total/$scope.us_providers.length);
-            for(var j = 0; j < $scope.us_providers.length; j++){
-                $scope.us_result.push({name: $scope.us_providers[j], arr:[], sutki:"", currentNumber:""});
-            }
-
-            for(var z = 0; z < $scope.us_voted.length; z++){
-                for(var s = 0; s < $scope.us_result.length; s++){
-                    if($scope.us_result[s].name === $scope.us_voted[z].cityId){
-                        $scope.us_result[s].arr.push($scope.us_voted[z]);
-                    }
-                }
-            }
-            for(var f =0; f < $scope.us_result.length; f++){
-                var sutkiCounter = 0;
-                var now = new Date();
-                var beforeYesterday1  = new Date(now.getFullYear(), now.getMonth(), now.getDate()-1, now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
-                for(var l=0; l < $scope.us_result[f].arr.length; l++){
-                    if(beforeYesterday1 > new Date($scope.us_result[f].arr[l].votingDate)){
-                        sutkiCounter++;
-                    }
-                }
-                $scope.us_result[f].sutki = sutkiCounter;
-                $scope.us_result[f].currentNumber = $scope.us_result[f].arr.length;
-            }
-
-
-
-            $scope.us_provider_required_2 = parseInt($scope.us_total/$scope.vpn_us_providers.length);
-            for(var a =0; a < $scope.vpn_us_providers.length; a++){
-                $scope.us_result_prov[a] = {name: $scope.vpn_us_providers[a], arr: [], sutki:"",  currentNumber: ""};
-                for(var h=0; h < $scope.us_voted.length; h++){
-                    if($scope.us_voted[h].cityId.indexOf($scope.vpn_us_providers[a]) > -1){
-                        $scope.us_result_prov[a].arr.push($scope.us_voted[h]);
-                    }
-                }
-
-                for(var u =0; u < $scope.us_result_prov.length; u++){
-                    var sutkiCounter = 0;
-                    var now = new Date();
-                    var beforeYesterday2  = new Date(now.getFullYear(), now.getMonth(), now.getDate()-1, now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
-                    for(var w=0; w < $scope.us_result_prov[u].arr.length; w++){
-                        if(beforeYesterday2 > new Date($scope.us_result_prov[u].arr[w].votingDate)){
-                            sutkiCounter++;
-                        }
-                    }
-                    $scope.us_result_prov[u].sutki = sutkiCounter;
-                    $scope.us_result_prov[a].currentNumber = $scope.us_result_prov[a].arr.length;
-                }
-            }
-            console.log($scope.us_result_prov);*/
-
         });
 
         apiService.getFRVoted().then(function(data){
             $scope.fr_voted = data;
             for(var m = 0; m < $scope.fr_voted.length; m++){
-                if(m === 0){
-                    $scope.fr_providers.push($scope.fr_voted[m].cityId);
-                }else{
-                    if($scope.fr_providers.indexOf($scope.fr_voted[m].cityId)===-1){
-                        $scope.fr_providers.push($scope.fr_voted[m].cityId);
+                for(var o=0; o < $scope.fr_providers_data.length; o++){
+                    if($scope.fr_voted[m].cityId.trim()===$scope.fr_providers_data[o].name.trim()){
+                        for(var y=0; y < $scope.fr_providers_result.length; y++){
+                            if($scope.fr_providers_result[y].name.trim()===$scope.fr_providers_data[o].provider.trim()){
+                                $scope.fr_providers_result[y].result.push($scope.fr_voted[i].email);
+                                $scope.fr_providers_result[y].currentNumber = $scope.fr_providers_result[y].result.length;
+                                break;
+                            }
+                        }
+                        for(var y=0; y < $scope.fr_cities_result.length; y++){
+                            if($scope.fr_cities_result[y].name.trim()===$scope.fr_providers_data[o].city.trim()){
+                                $scope.fr_cities_result[y].result.push($scope.fr_voted[m].email);
+                                $scope.fr_cities_result[y].currentNumber = $scope.fr_cities_result[y].result.length;
+                                break;
+                            }
+                        }
+                        break;
                     }
                 }
             }
-            $scope.fr_provider_required = parseInt($scope.fr_total/$scope.fr_providers.length);
+            /*$scope.fr_provider_required = parseInt($scope.fr_total/$scope.fr_providers.length);
             for(var o = 0; o < $scope.fr_providers.length; o++){
                 $scope.fr_result.push({name: $scope.fr_providers[o], arr:[], sutki:"", currentNumber:""});
             }
@@ -309,7 +305,7 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
                     $scope.fr_result_prov[x].currentNumber = $scope.fr_result_prov[x].arr.length;
                 }
             }
-            console.log($scope.fr_result_prov);
+            console.log($scope.fr_result_prov);*/
 
         });
 
