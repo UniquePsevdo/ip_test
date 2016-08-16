@@ -172,24 +172,24 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
             $scope.us_voted = data;
             for(var i = 0; i < $scope.us_voted.length; i++){
                 for(var j=0; j < $scope.us_providers_data.length; j++){
-                    console.log($scope.us_voted[i].cityId.trim(), $scope.us_providers_data[j].name.trim());
                     if($scope.us_voted[i].cityId.trim()===$scope.us_providers_data[j].name.trim()){
                         for(var z=0; z < $scope.us_providers_result.length; z++){
                             if($scope.us_providers_result[z].name.trim()===$scope.us_providers_data[j].provider.trim()){
                                 $scope.us_providers_result[z].result.push($scope.us_voted[i].email);
                                 $scope.us_providers_result[z].currentNumber = $scope.us_providers_result[z].result.length;
+                                break;
                             }
-                            break;
                         }
                         for(var z=0; z < $scope.us_cities_result.length; z++){
                             if($scope.us_cities_result[z].name.trim()===$scope.us_providers_data[j].city.trim()){
                                 $scope.us_cities_result[z].result.push($scope.us_voted[i].email);
                                 $scope.us_cities_result[z].currentNumber = $scope.us_cities_result[z].result.length;
+                                break;
                             }
-                            break;
+
                         }
+                        break;
                     }
-                    break;
                 }
             }
 
