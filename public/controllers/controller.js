@@ -240,7 +240,7 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
                     if($scope.fr_voted[m].cityId.trim()===$scope.fr_providers_data[o].name.trim()){
                         for(var y=0; y < $scope.fr_providers_result.length; y++){
                             if($scope.fr_providers_result[y].name.trim()===$scope.fr_providers_data[o].provider.trim()){
-                                $scope.fr_providers_result[y].result.push($scope.fr_voted[i].email);
+                                $scope.fr_providers_result[y].result.push($scope.fr_voted[m].email);
                                 $scope.fr_providers_result[y].currentNumber = $scope.fr_providers_result[y].result.length;
                                 break;
                             }
