@@ -168,23 +168,14 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
             {name: 'Powerhouse Management', result:[], currentNumber:''}
         ];
 
-        var test = [];
-
         apiService.getUSVoted().then(function(data){
             $scope.us_voted = data;
             for(var i = 0; i < $scope.us_voted.length; i++){
-                if(test.indexOf($scope.us_voted[i].cityId) === -1){
-                    test.push($scope.us_voted[i].cityId);
-                }else{
-                    console.log('refuse');
-                }
-
                 for(var j=0; j < $scope.us_providers_data.length; j++){
                     if($scope.us_voted[i].cityId.trim()===$scope.us_providers_data[j].name.trim()){
-                        console.log(i,'-1');
+                        console.log($scope.us_voted[i].cityId.trim(), $scope.us_providers_data[j].name.trim());
                         for(var z=0; z < $scope.us_providers_result.length; z++){
                             if($scope.us_providers_result[z].name.trim()===$scope.us_providers_data[j].provider.trim()){
-                                console.log(i,'-2');
                                 $scope.us_providers_result[z].result.push($scope.us_voted[i].email);
                                 $scope.us_providers_result[z].currentNumber = $scope.us_providers_result[z].result.length;
                             }
@@ -192,7 +183,6 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
                         }
                         for(var z=0; z < $scope.us_cities_result.length; z++){
                             if($scope.us_cities_result[z].name.trim()===$scope.us_providers_data[j].city.trim()){
-                                console.log(i,'-3');
                                 $scope.us_cities_result[z].result.push($scope.us_voted[i].email);
                                 $scope.us_cities_result[z].currentNumber = $scope.us_cities_result[z].result.length;
                             }
@@ -202,8 +192,6 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
                     break;
                 }
             }
-
-            console.log(test);
 
             /*console.log($scope.us_providers_result);
             console.log($scope.us_cities_result);*/
