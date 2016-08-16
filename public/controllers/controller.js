@@ -256,56 +256,8 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
                     }
                 }
             }
-            /*$scope.fr_provider_required = parseInt($scope.fr_total/$scope.fr_providers.length);
-            for(var o = 0; o < $scope.fr_providers.length; o++){
-                $scope.fr_result.push({name: $scope.fr_providers[o], arr:[], sutki:"", currentNumber:""});
-            }
-
-            for(var y = 0; y < $scope.fr_voted.length; y++){
-                for(var s = 0; s < $scope.fr_result.length; s++){
-                    if($scope.fr_result[s].name === $scope.fr_voted[y].cityId){
-                        $scope.fr_result[s].arr.push($scope.fr_voted[y]);
-                    }
-                }
-            }
-
-            for(var b =0; b < $scope.fr_result.length; b++){
-                var sutkiCounter = 0;
-                var now = new Date();
-                var beforeYesterday3  = new Date(now.getFullYear(), now.getMonth(), now.getDate()-1, now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
-                for(var q=0; q < $scope.fr_result[b].arr.length; q++){
-                    if(beforeYesterday3 > new Date($scope.fr_result[b].arr[q].votingDate)){
-                        sutkiCounter++;
-                    }
-                }
-                $scope.fr_result[b].sutki = sutkiCounter;
-                $scope.fr_result[b].currentNumber = $scope.fr_result[b].arr.length;
-            }
-
-
-            $scope.fr_provider_required_2 = parseInt($scope.fr_total/$scope.vpn_fr_providers.length);
-            for(var x =0; x < $scope.vpn_fr_providers.length; x++){
-                $scope.fr_result_prov[x] = {name: $scope.vpn_fr_providers[x], arr: [], sutki:"",  currentNumber: ""};
-                for(var d=0; d < $scope.fr_voted.length; d++){
-                    if($scope.fr_voted[d].cityId.indexOf($scope.vpn_fr_providers[x]) > -1){
-                        $scope.fr_result_prov[x].arr.push($scope.fr_voted[d]);
-                    }
-                }
-
-                for(var v =0; v < $scope.fr_result_prov.length; v++){
-                    var sutkiCounter = 0;
-                    var now = new Date();
-                    var beforeYesterday4  = new Date(now.getFullYear(), now.getMonth(), now.getDate()-1, now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
-                    for(var p=0; p < $scope.fr_result_prov[v].arr.length; p++){
-                        if(beforeYesterday4 > new Date($scope.fr_result_prov[v].arr[p].votingDate)){
-                            sutkiCounter++;
-                        }
-                    }
-                    $scope.fr_result_prov[v].sutki = sutkiCounter;
-                    $scope.fr_result_prov[x].currentNumber = $scope.fr_result_prov[x].arr.length;
-                }
-            }
-            console.log($scope.fr_result_prov);*/
+            console.log($scope.fr_providers_result);
+            console.log($scope.fr_cities_result);
 
         });
 
