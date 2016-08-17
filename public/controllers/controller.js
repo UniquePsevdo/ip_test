@@ -23,7 +23,7 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
             {provider:'Nobis Technology Group', name: 'ExpressVPN Los Angeles', city:'Los Angeles'},
             {provider:'Nobis Technology Group', name: 'ExpressVPN Los Angeles_San Diego', city:'San Diego'},
             {provider:'Nobis Technology Group', name: 'ExpressVPN Los Angeles_Seattle', city:'Seattle'},
-            {provider:'Nobis Technology Group', name: 'ExpressVPN Los Angeles San Fran', city:'Los Angeles'},
+            {provider:'Nobis Technology Group', name: 'ExpressVPN Los Angeles San Fran', city:'San Fran'},
             {provider:'SoftLayer Technologies', name: 'ExpressVPN USA Miami', city:'Miami'},
             {provider:'SoftLayer Technologies', name: 'ExpressVPN Miami', city:'Miami'},
             {provider:'SoftLayer Technologies', name: 'ExpressVPN Washington DC', city:'Washington'},
