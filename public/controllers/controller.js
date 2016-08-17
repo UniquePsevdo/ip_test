@@ -52,6 +52,7 @@ angular.module("testTaskApp", ["ngRoute", 'ngMaterial', 'appServices'])
         ];
 
         $scope.fr_providers_data = [
+            {provider:'EDIS Gmbh', name: 'ExpressVPN Belgium_Brussels', city:'Brussels'},
             {provider:'Yesup Ecommerce Solutions', name: 'ExpressVPN Canada - Toronto_North York', city:'North York'},
             {provider:'Yesup Ecommerce Solutions', name: 'ExpressVPN Canada Montreal-2', city:'Montreal'},
             {provider:'Yesup Ecommerce Solutions', name: 'ExpressVPN Canada_Montreal-2', city:'Montreal'},
